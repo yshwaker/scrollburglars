@@ -22,6 +22,7 @@ h2 {
 }
 
 main {
+  position: relative;
   padding-top: 64px;
   isolation: isolate;
   max-width: 100%;
@@ -159,4 +160,23 @@ a {
 
 .heading-content {
   position: relative;
+}
+
+.centered-stuff:not(.floated) {
+  overflow: hidden;
+}
+
+.centered-stuff.floated {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.centered-stuff.floated .social-icons a {
+  pointer-events: auto;
+}
+
+.centered-stuff.floated .max-width-wrapper {
+  height: 100%;
 }
